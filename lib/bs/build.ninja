@@ -1,0 +1,17 @@
+rescript = 1
+g_finger := /home/matheus/projects/nostr-probable-train/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /home/matheus/projects/nostr-probable-train/node_modules/.pnpm/rescript@10.1.2/node_modules/rescript/linux/bsc.exe  -bs-v 10.1.2 -bs-jsx 4 -bs-jsx-mode classic  -absname -bs-ast -o $out $i
+o src/lib/nostr.ast : astj ../../src/lib/nostr.res
+rule deps
+  command = /home/matheus/projects/nostr-probable-train/node_modules/.pnpm/rescript@10.1.2/node_modules/rescript/linux/bsb_helper.exe -hash 8b48857f30b1a6f6d9f8c314012fd4d7 $in
+  restat = 1
+o src/lib/nostr.d : deps src/lib/nostr.ast
+rule mij
+  command = /home/matheus/projects/nostr-probable-train/node_modules/.pnpm/rescript@10.1.2/node_modules/rescript/linux/bsc.exe -I src/components -I src/lib -I src -I /home/matheus/projects/nostr-probable-train/node_modules/@rescript/react/lib/ocaml   -bs-gentype -bs-package-name nostr-probable-train -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/lib/nostr.cmj src/lib/nostr.cmi ../../src/lib/nostr.bs.js : mij src/lib/nostr.ast
+o src/components/Header.ast : astj ../../src/components/Header.res
+o src/components/Header.d : deps src/components/Header.ast
+o src/components/Header.cmj src/components/Header.cmi ../../src/components/Header.bs.js : mij src/components/Header.ast

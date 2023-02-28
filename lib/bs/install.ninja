@@ -1,0 +1,14 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o nostr.cmi : cp ../bs/src/lib/nostr.cmi
+o nostr.cmj : cp ../bs/src/lib/nostr.cmj
+o nostr.cmt : cp ../bs/src/lib/nostr.cmt
+o nostr.res : cp ../../src/lib/nostr.res
+o Header.cmi : cp ../bs/src/components/Header.cmi
+o Header.cmj : cp ../bs/src/components/Header.cmj
+o Header.cmt : cp ../bs/src/components/Header.cmt
+o Header.res : cp ../../src/components/Header.res
+build install.stamp : touch nostr.cmi nostr.cmj Header.cmi Header.cmj 

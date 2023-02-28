@@ -34,3 +34,6 @@ dist/
 
 # typescript
 .tsbuildinfo
+
+*.bs.js
+*.gen.tsx

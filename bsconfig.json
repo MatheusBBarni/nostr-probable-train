@@ -1,0 +1,35 @@
+{
+  "name": "nostr-probable-train",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "jsx": {
+    "version": 4,
+    "mode": "classic"
+  },
+  "bs-dependencies": [
+    "@rescript/react"
+  ],
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {
+      "ReasonReact": "ReactShim"
+    },
+    "generatedFileExtension": ".gen.tsx",
+    "module": "es6",
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  }
+}

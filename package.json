@@ -2,31 +2,39 @@
   "name": "nostr-probable-train",
   "displayName": "Nostr probable train",
   "version": "0.0.1",
-  "description": "This example demonstrates a variety of ways to use environment variables with plasmo",
+  "description": "Browser extension for NOSTR - Basic Social media like twitter and NIP-7 implementation",
   "author": "matheusBBarni",
   "scripts": {
-    "dev": "plasmo dev",
+    "clear": "rm -rf build",
+    "full:clear": "rm -rf build .plasmo",
+    "dev": "rm -rf build && plasmo dev",
     "build": "plasmo build",
-    "package": "plasmo package"
+    "package": "plasmo package",
+    "res:build": "rescript",
+    "res:dev": "rescript build -w"
   },
   "dependencies": {
+    "@rescript/react": "^0.11.0",
     "plasmo": "0.65.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "rescript": "^10.1.2"
   },
   "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.1",
     "@types/chrome": "0.0.210",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "prettier": "2.8.3",
-    "typescript": "4.9.4",
-    "@plasmohq/prettier-plugin-sort-imports": "3.6.1"
+    "typescript": "4.9.4"
   },
   "manifest": {
-    "homepage_url": "",
     "host_permissions": [
       "https://*/*"
+    ],
+    "permissions": [
+      "scripting"
     ]
   }
 }

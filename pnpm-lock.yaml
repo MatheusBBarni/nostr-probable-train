@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@plasmohq/prettier-plugin-sort-imports': 3.6.1
+  '@rescript/react': ^0.11.0
   '@types/chrome': 0.0.210
   '@types/node': 18.11.18
   '@types/react': 18.0.27
@@ -10,12 +11,15 @@ specifiers:
   prettier: 2.8.3
   react: 18.2.0
   react-dom: 18.2.0
+  rescript: ^10.1.2
   typescript: 4.9.4
 
 dependencies:
+  '@rescript/react': 0.11.0_biqbaboplfbrettd7655fr4n2y
   plasmo: 0.65.3_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  rescript: 10.1.2
 
 devDependencies:
   '@plasmohq/prettier-plugin-sort-imports': 3.6.1_prettier@2.8.3
@@ -1903,6 +1907,16 @@ packages:
     dependencies:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+    dev: false
+
+  /@rescript/react/0.11.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-RzoAO+3cJwXE2D7yodMo4tBO2EkeDYCN/I/Sj/yRweI3S1CY1ZBOF/GMcVtjeIurJJt7KMveqQXTaRrqoGZBBg==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@sindresorhus/is/5.3.0:
@@ -4598,6 +4612,12 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       rc: 1.2.8
+    dev: false
+
+  /rescript/10.1.2:
+    resolution: {integrity: sha512-PPdhOiN+lwqxQ0qvzHc1KW0TL12LDy2X+qo/JIMIP3bMfiH0vxQH2e/lXuoutWWm04fGQGTv3hWH+gKW3/UyfA==}
+    hasBin: true
+    requiresBuild: true
     dev: false
 
   /resolve-alpn/1.2.1:
