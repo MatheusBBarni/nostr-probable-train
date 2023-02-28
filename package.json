@@ -24,7 +24,7 @@
     "@plasmohq/prettier-plugin-sort-imports": "3.6.1"
   },
   "manifest": {
-    "homepage_url": "$PLASMO_PUBLIC_SITE_URL",
+    "homepage_url": "",
     "host_permissions": [
       "https://*/*"
     ]
