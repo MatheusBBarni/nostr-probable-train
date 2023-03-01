@@ -2,7 +2,7 @@
   "name": "nostr-probable-train",
   "displayName": "Nostr probable train",
   "version": "0.0.1",
-  "description": "Browser extension for NOSTR - Basic Social media like twitter and NIP-7 implementation",
+  "description": "Browser extension for NOSTR - Relays indexer that you have signed messages and NIP-7 implementation",
   "author": "matheusBBarni",
   "scripts": {
     "clear": "rm -rf build",
