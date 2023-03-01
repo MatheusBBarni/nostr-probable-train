@@ -1,6 +1,6 @@
 # Nostr probable train
 
-Browser extension for NOSTR - Basic Social media like twitter and NIP-7 implementation
+Browser extension for NOSTR - Relays indexer that you have signed messages and NIP-7 implementation
 
 ### Tech Stack
 
